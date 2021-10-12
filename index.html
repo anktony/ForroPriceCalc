@@ -19,15 +19,13 @@
                 <input type="radio" name="tipoDeVenda" value="debito" id=""> Débito
             </div>
 
-            <div class="linha">
-                Valor: 
+            <span class="">Valor: 
                 <input type="number" name="ValorDaVenda" placeholder="Valor da Venda" step="any" required>  
-            </div>
+            </span>
 
-            <div class="linha">
-                Parcelas:
-            <input type="number" name="numeroDeParcelas" id="" placeholder="Número de Parcelas" max=12>
-            </div>
+            <span class="linha">Parcelas:
+                <input type="number" name="numeroDeParcelas" id="" placeholder="Número de Parcelas" max=12>
+            </span>
 
             <div class="submitDiv">
                 <input type="submit" value="calcular">
@@ -37,12 +35,12 @@
         <div class="output">
             <span class="titulo"><h3>Recebido</h1></span>
            
-            <span>Stone:
-                <input type="number"  name="" placeholder="" disabled readonly>
+            <span class="">Stone:
+                <input type="number"  name="rebidoViaStone" placeholder="" disabled readonly>
             </span>
 
-            <span>Sumup:                
-                <input type="number" name="" disabled readonly>
+            <span class="">Sumup:                
+                <input type="number" name="recebidoViaSumup" disabled readonly>
             </span>
         </div>
     </div>

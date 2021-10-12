@@ -11,23 +11,17 @@
     background-color: #f0f8ff;
 }
 
+.container span{
+    display: flex;
+}
+
+.container input{
+    flex: 2;
+}
+
 header{ 
     text-align: center;
     padding: 10px;
-    }
-
-
-
-.linha{
-    padding-top: 10px;
-
-
-}
-
-form input[type=number]{
-    /* display: block; */
-    /* margin:10px 0 10px 0; */
-  
     }
 
 input::-webkit-outer-spin-button,
