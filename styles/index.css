@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .container{
@@ -40,10 +40,10 @@ form input[type="submit"]{
     padding: 5px;
    }
 
-.output span{
+.recebido span{
     display: flex;
 }
 
-.output input{
+.recebido input{
     flex: 2;
 }
