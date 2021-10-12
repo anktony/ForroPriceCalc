@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>calculadora </title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Calculadora</h3>
+        </header>
+    
+        <form action="">
+            <div> Tipo:
+                <input type="radio" name="tipoDeVenda" value="credito" id="" checked> Crédito
+                <input type="radio" name="tipoDeVenda" value="debito" id=""> Débito
+            </div>
+
+            <div class="linha">
+                Valor: 
+                <input type="number" name="ValorDaVenda" placeholder="Valor da Venda" step="any" required>  
+            </div>
+
+            <div class="linha">
+                Parcelas:
+            <input type="number" name="numeroDeParcelas" id="" placeholder="Número de Parcelas" max=12>
+            </div>
+
+            <div class="submitDiv">
+                <input type="submit" value="calcular">
+            </div>
+        </form>
+
+        <div class="output">
+            <span class="titulo"><h3>Recebido</h1></span>
+           
+            <span>Stone:
+                <input type="number"  name="" placeholder="" disabled readonly>
+            </span>
+
+            <span>Sumup:                
+                <input type="number" name="" disabled readonly>
+            </span>
+        </div>
+    </div>
+    
+</body>
+
+</html>

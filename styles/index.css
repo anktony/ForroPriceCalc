@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.container{
+    max-width: 300px;
+    margin: auto; 
+    background-color: #f0f8ff;
+}
+
+header{ 
+    text-align: center;
+    padding: 10px;
+    }
+
+
+
+.linha{
+    padding-top: 10px;
+
+
+}
+
+form input[type=number]{
+    /* display: block; */
+    /* margin:10px 0 10px 0; */
+  
+    }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+.submitDiv{
+    margin: auto;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+}
+
+form input[type="submit"]{
+    padding: 5px;
+   }
+
+.output span{
+    display: flex;
+}
+
+.output input{
+    flex: 2;
+}
