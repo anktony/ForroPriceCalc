@@ -1,19 +1,47 @@
 const debitoSumup = 1.9;
 const debitoStone = 1.8;
 
-var taxasSumup = [[1, 4.6],[2, 6.1], [3, 7.6], [4, 9.1], [5, 10.6], [6, 12.1], [7,13.6], [8, 15.1],
-                 [9, 16.6], [10, 18.1], [11, 19.6], [12, 21.1]];
+var taxasSumup = [4.60, 6.10, 7.60, 9.10, 10.60, 12.10, 13.60, 15.10, 16.60, 18.10, 19.60, 21.10];
 
-var taxasStone = [[1, 4.94],[2, 6.35], [3, 7.46], [4, 8.58], [5, 9.69], [6, 10.81], [7, 12.33], [8, 13.44],
-                 [9, 14.55], [10, 15.66], [11, 16.77], [12, 17.88]];
+var taxasStone = [4.94, 6.35, 7.46, 8.58, 9.69, 10.81, 12.33, 13.44, 14.55, 15.66, 16.77, 17.88];
 
 
-let valorDaVenda = document.getElementById('valorDaVenda').value;
-let numeroDeParcelas = document.getElementById('numeroDeParcelas').value;
 
-function calcularValoresSumup(){
-    valorDaVenda += valorDaVenda * TaxasSumup[]
-}       
+const calcularSumup = (valor, parcelas) =>{
+    let  total = valor /(1 - taxasSumup[parcelas -1]/100);
+    let aPagar = total*(taxasSumup[parcelas -1]/100);
+    let aReceber = total - total*(taxasSumup[parcelas -1]/100);
+    
+    document.getElementById('total').innerHTML= "Total: R$" + total;
+    document.getElementById('pagoASumup').value = aPagar;
+    document.getElementById('recebidoViaSumup').value = aReceber; 
+}
 
-// alert(taxasStone[0][1])
+const calcularStone = ( valor, parcelas) =>{
+    let  total = valor /(1 - taxasStone[parcelas -1]/100);
+    let aPagar = total*(taxasStone[parcelas -1]/100);
+    let aReceber = total - total*(taxasStone[parcelas -1]/100);
+    
+    document.getElementById('total').innerHTML= "Total: R$" + total;
+    document.getElementById('pagoAStone').value = aPagar;
+    document.getElementById('recebidoViaStone').value = aReceber; 
+}
+
+
+
+
+
+const calcularValores =() => {
+    let valorDoServico = parseFloat(document.getElementById('valorDoServico').value);
+    let numeroDeParcelas = parseInt(document.getElementById('numeroDeParcelas').value);
+        calcularSumup(valorDoServico, numeroDeParcelas);
+        calcularStone(valorDoServico, numeroDeParcelas);
+
+  
+
+}  
+
+
+
+
 

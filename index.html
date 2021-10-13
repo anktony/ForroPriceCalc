@@ -20,11 +20,11 @@
             </div>
 
             <span class="">Valor: 
-                <input type="number" name="ValorDaVenda" id="valorDaVenda" placeholder="Valor da Venda" step="any" required>  
+                <input type="number" name="valorDoServico" id="valorDoServico" placeholder="Valor do Serviço" step="any" required value= 100>  
             </span>
 
             <span class="linha">Parcelas:
-                <input type="number" name="numeroDeParcelas" id="numeroDeParcelas" placeholder="Número de Parcelas" max=12>
+                <input type="number" name="numeroDeParcelas" id="numeroDeParcelas" placeholder="Número de Parcelas" max=12 value=1>
             </span>
 
             <!-- <div class="submitDiv">
@@ -32,39 +32,44 @@
             </div> -->
 
             <div class="submitDiv">
-                <input type="button" value="CALCULAR" onmousedown="">
+                <input type="button" value="CALCULAR" onclick="calcularValores()">
             </div>
+
+            <span class="total">
+                <h1 id="total">Total: </h1>
+            </span>
+
 
 
         </form>
 
         <div class="recebido">
-            <span class="titulo"><h3>Recebido</h1></span>
+            <span class="titulo"><h3>A receber</h1></span>
            
             <span class="">Stone:
-                <input type="number"  value=0.0 name="rebidoViaStone" placeholder="" disabled readonly>
+                <input type="number"  value=0.0 name="recebidoViaStone" id="recebidoViaStone" placeholder="" disabled readonly>
             </span>
 
             <span class="">Sumup:                
-                <input type="number" value=0.0 name="recebidoViaSumup" disabled readonly>
+                <input type="number" value=0.0 name="recebidoViaSumup" id="recebidoViaSumup" disabled readonly>
             </span>
 
             <span class="">Diferença:                
-                <input type="number" value=0.0 name="recebidoViaSumup" disabled readonly>
+                <input type="number" value=0.0 name="" disabled readonly>
             </span>
 
             <div class="pago">
-                <span class="titulo"><h3>Pago</h1></span>
+                <span class="titulo"><h3>A pagar</h1></span>
                
                 <span class="">Stone:
-                    <input type="number"  value=0.0 name="pagoAStone" placeholder="" disabled readonly>
+                    <input type="number"  value=0.0 name="pagoAStone" id="pagoAStone" placeholder="" disabled readonly>
                 </span>
     
                 <span class="">Sumup:                
-                    <input type="number" value=0.0 name="pagoaSumup" disabled readonly>
+                    <input type="number" value=0.0 name="pagoASumup" id="pagoASumup" disabled readonly>
                 </span>
                 <span class="">Diferença:                
-                    <input type="number" value=0.0 name="recebidoViaSumup" disabled readonly>
+                    <input type="number" value=0.0 name="" id="" disabled readonly>
                 </span>
             </div>
         </div>
