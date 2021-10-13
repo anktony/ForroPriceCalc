@@ -11,8 +11,8 @@ const calcularSumup = (total, parcelas) =>{
     let aPagar = total*(taxasSumup[parcelas -1]/100);
     let aReceber = total - total*(taxasSumup[parcelas -1]/100);
     
-    document.getElementById('pagoASumup').value = aPagar;
-    document.getElementById('recebidoViaSumup').value = aReceber; 
+    document.getElementById('pagoASumup').value = aPagar.toFixed(2);
+    document.getElementById('recebidoViaSumup').value = aReceber.toFixed(2); 
 }
 
 const calcularStone = (total, parcelas) =>{
@@ -20,8 +20,8 @@ const calcularStone = (total, parcelas) =>{
     let aPagar = total*(taxasStone[parcelas -1]/100);
     let aReceber = total - total*(taxasStone[parcelas -1]/100);
     
-    document.getElementById('pagoAStone').value = aPagar;
-    document.getElementById('recebidoViaStone').value = aReceber; 
+    document.getElementById('pagoAStone').value = aPagar.toFixed(2);
+    document.getElementById('recebidoViaStone').value = aReceber.toFixed(2); 
 }
 
 const calcularDiferencaAReceber = () =>{
@@ -29,12 +29,12 @@ const calcularDiferencaAReceber = () =>{
     let recebidoViaStone = document.getElementById('recebidoViaStone').value;
     
    if(recebidoViaSumup>recebidoViaStone){
-        document.getElementById('diferencaAReceber').value = recebidoViaSumup - recebidoViaStone;
+        document.getElementById('diferencaAReceber').value = (recebidoViaSumup - recebidoViaStone).toFixed(2);
         document.getElementById('diferencaAReceber').style.color = "blue";
     }
 
    else if(recebidoViaSumup<recebidoViaStone){
-        document.getElementById('diferencaAReceber').value = recebidoViaStone - recebidoViaSumup;
+        document.getElementById('diferencaAReceber').value = (recebidoViaStone - recebidoViaSumup).toFixed(2);
         document.getElementById('diferencaAReceber').style.color = "green";
    }
 
@@ -49,33 +49,31 @@ const calcularDiferencaAPagar = () =>{
     let inputDiferencaPaga  = document.getElementById('diferencaAPagar');
 
     if(pagoASumup>pagoAStone){
-        inputDiferencaPaga.value = pagoASumup - pagoAStone;
-        inputDiferencaPaga.style.color = "#ff0000";
+        inputDiferencaPaga.value = (pagoASumup - pagoAStone).toFixed(2);
+        inputDiferencaPaga.style.color = "#0000ff";
     }
-    else if(pagoASumup>pagoAStone){
-        inputDiferencaPaga.value = pagoAStone - pagoASumup;
-        inputDiferencaPaga.style.color = "#ff0000";
+    else if(pagoASumup<pagoAStone){
+        inputDiferencaPaga.value = (pagoAStone - pagoASumup).toFixed(2);
+        inputDiferencaPaga.style.color = "#00ff00";
     }
+    
 }
 
-
-
-
-
-const calcularValores =() => {
+const calcularValores = () => {
     let valorDoServico = parseFloat(document.getElementById('valorDoServico').value);
     let numeroDeParcelas = parseInt(document.getElementById('numeroDeParcelas').value);
 
     let  total = valorDoServico /(1 - taxasStone[numeroDeParcelas -1]/100);
 
-    document.getElementById('total').innerHTML= "Total: R$" + total;
+    document.getElementById('total').innerHTML= "Total: R$" + total.toFixed(2);
 
     calcularSumup(total, numeroDeParcelas);
     calcularStone(total, numeroDeParcelas);
     calcularDiferencaAReceber();
     calcularDiferencaAPagar();
-    
 }  
+
+
 
 
 
