@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
    
-    
-    <script type="module" src="./scripts/calculadora.js"></script>
+<!--     
+    <script type="module" src="./scripts/MarcaMaquininha.js"></script> 
     <script type="module"  src="./scripts/sumup.js"></script>
-    <!-- <script type="module"  src="./scripts/stone.js"></script> -->
+    <script type="module"  src="./scripts/stone.js"></script> -->
+    <script type="module"  src="./scripts/Calcular.js"></script>
 
     <title>calculadora </title>
 </head>
@@ -25,6 +26,13 @@
                 <input type="radio" name="tipoDeVenda" value="debito" id=""> Débito
             </div>
 
+            <div>
+                <select name="Maquininhas" id="Maquininhas">
+                   <option value="Stone">Stone</option> 
+                   <option value="Sumup">Sumup</option> 
+                </select>
+            </div>
+
             <span class="">Valor: 
                 <input type="number" name="valorDoServico" id="valorDoServico" placeholder="Valor do Serviço" step="any" required value= 100>  
             </span>
@@ -33,16 +41,12 @@
                 <input type="number" name="numeroDeParcelas" id="numeroDeParcelas" placeholder="Número de Parcelas" max=12 value=1>
             </span>
 
-            <!-- <div class="submitDiv">
-                <input type="submit" value="TEMPORARIO">
-            </div> -->
-
             <div class="submitDiv">
                 <input type="button" value="CALCULAR" id="botao1" onclick="">
             </div>
 
             <span class="total">
-                <h1 id="total">Total: </h1>
+                <h1 id="valorTotal">Total: </h1>
             </span>
 
 
@@ -60,9 +64,9 @@
                 <input type="text" value=0.0 name="recebidoViaSumup" id="recebidoViaSumup" disabled readonly>
             </span>
 
-            <span class="">Diferença:                
+            <!-- <span class="">Diferença:                
                 <input type="text" value=0.0 name="diferencaAReceber" id="diferencaAReceber" disabled readonly>
-            </span>
+            </span> -->
 
             <div class="pago">
                 <span class="titulo"><h3>A pagar</h1></span>
@@ -74,9 +78,9 @@
                 <span class="">Sumup:                
                     <input type="text" value=0.0 name="pagoASumup" id="pagoASumup" disabled readonly>
                 </span>
-                <span class="">Diferença:                
+                <!-- <span class="">Diferença:                
                     <input type="text" value=0.0 name="diferencaAPagar" id="diferencaAPagar" disabled readonly>
-                </span>
+                </span> -->
 
             </div>
         </div>
